@@ -6,18 +6,19 @@
     <body>
         <input id="firstNumber">
         <select id="operation">
-  <option id="plus">+</option>
-  <option id="minus">-</option>
-  <option id="times">x</option>
-  <option id="divide">÷</option>
+  <option value="plus">+</option>
+  <option value="minus">-</option>
+  <option value="times">x</option>
+  <option value="divide">÷</option>
         </select>
         <input id="secondNumber">
         <button onclick="calculate()">Calculate!</button>
         <script>
         function calculate() {
+            var z = document.getElementById("secondNumber").value;
             var x = document.getElementById("firstNumber").value;
             var y = document.getElementById("operation").value;
-            if (y =="plus") {
+                  if (y =="plus") {
                 alert(x + z);
             }
             if (y=="minus"){
@@ -29,8 +30,9 @@
             if (y =="divide"){
                 alert(x / z);
             }
-            var z = document.getElementById("secondNumber").value;
+
         }
+
         </script>
 
     </body>
