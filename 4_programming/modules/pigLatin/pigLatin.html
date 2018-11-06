@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+File: pigLatin.html
+Name: Jara Rokahr Knowles
+Date: 2018-11-01
+Desc: Translates a single word into pig latin
+-->
+<html>
+    <head>
+        <!-- Site title  -->
+        <title>Pig Latin Translator</title>
+    </head>
+
+
+    <body id="background">
+
+        <!-- Web page heading and instructions in following div -->
+       <div id="heading">
+        <h1>Pig Latin Translator:</h1>
+        <p>Enter a single word to have it translated into pig latin.</p>
+           <p>(no capital letters)</p>
+       </div>
+           <!-- Creates user input to be translated into pig latin -->
+           <input type="text" id="wordInput"><br>
+        <!-- Translate button attatched to translation JS -->
+        <button id="button" onclick="Translate()">Translate!</button>
+
+        <script>
+            //Function attatched to button that translates to piglatin
+            function Translate() {
+                //Defines a list of variables including vowles constanants ext.
+                var cons = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"];
+                var vow = ["a", "e", "i", "o", "u", "y"];
+                var word = document.getElementById("wordInput").value;
+                var wordlength = word.length;
+                var firstletter = word.charAt(0);
+                var result;
+                var findvow;
+                var firstvow = 1000000;
+                var firstcons;
+               //JS for pig latin translator
+                word = word.toLowerCase();
+                //Finds the the first vowel
+                for(scan = 0; scan >= 0 && scan < vow.length; scan++) {
+                    findvow = word.indexOf(vow[scan]);
+                    if(findvow > -1) {
+                        firstvow = Math.min(firstvow, findvow);
+                    }
+                }
+                //Translates if the first letter is a consonant
+                firstcons = word.slice(0,firstvow);
+                if(cons.indexOf(firstletter) > -1) {
+                   result = word.slice(firstvow,wordlength) + firstcons + "ay";
+                   }
+                //Translates if the first letter is a vowel
+                else if(vow.indexOf(firstletter) > -1) {
+                    result = word + "ay";
+                }
+                //Translates if the first letter is not a alphabeticle letter to an error messege
+                else {
+                     result = "Not a valid word";
+                }
+                //Sends translation as an alert
+                    alert(result);
+            }
+        </script>
+        <style>
+            #heading {
+            font-family:sans-serif;
+            text-decoration-line: underline;
+            margin-left: 20px;
+
+            }
+            #wordInput {
+                height: 40px;
+                width: 200px;
+                margin-top: 30px;
+                margin-left: 70px;
+                background-color: lightgoldenrodyellow;
+                font-size: 33px
+            }
+            #button {
+                height: 70px;
+                width: 200px;
+                margin-top: 30px;
+                margin-left: 70px;
+                background-color: darkorange;
+                font-size: 40px
+            }
+            #background {
+                background-color: beige;
+            }
+        </style>
+    </body>
+</html>
