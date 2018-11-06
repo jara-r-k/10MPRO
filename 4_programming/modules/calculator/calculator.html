@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <header>
+    <head>
     <title>Simple Calculator</title>
-    </header>
-    <body>
+    </head>
+
+    <!-- Calculator backround colour -->
+    <body id="background">
+    <!-- Heading and instructions in following div -->
+        <div>
+            <h1>The Worlds Simplest Calculator!</h1>
+        <p>Three quick, easy steps away from getting your answer. <br> All you need to do is enter you two numbers and a operation :D</p>
+        </div>
+        <!--Input and select options to put your operation and two sets of numbers -->
         <input id="firstNumber">
         <select id="operation">
   <option value="plus">+</option>
@@ -12,8 +20,10 @@
   <option value="divide">÷</option>
         </select>
         <input id="secondNumber">
-        <button onclick="calculate()">Calculate!</button>
+       <!-- button with calculate function attatched -->
+        <button id="button" onclick="calculate()">Calculate!</button>
         <script>
+            //calculation JS atatched to button
         function calculate() {
             var z = document.getElementById("secondNumber").value;
             var x = document.getElementById("firstNumber").value;
@@ -34,6 +44,41 @@
         }
 
         </script>
-
+<style>
+    /*visual aspect of the calculator style aspect */
+    #operation {
+        width: 40 px;
+        height: 40px;
+        font-weight: bold;
+        font-size: 30px;
+        background-color: cornsilk;
+    }
+    #secondNumber {
+       width: 150px;
+        height: 34px;
+        font-weight: bold;
+        font-size: 30px;
+        background-color: cornsilk;
+    }
+    #firstNumber {
+        width: 150px;
+        height: 34px;
+        font-weight: bold;
+        font-size: 30px;
+        background-color: cornsilk;
+    }
+    #background {
+        background-color: beige;
+    }
+    #button {
+        width: 40 px;
+        height: 40px;
+        font-weight: 200;
+        font-size: 30px;
+        background-color: cornsilk;
+        margin-left: 105px;
+        margin-top: 20px;
+    }
+        </style>
     </body>
 </html>
