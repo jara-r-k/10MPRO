@@ -1,12 +1,19 @@
 <!DOCTYPE html>
+<!--
+File: calculator.html
+Name: Jara Rokahr Knowles
+Date: 2018-10-29
+Desc: A very simple calculator
+-->
 <html>
     <head>
+           <!-- Site title -->
     <title>Simple Calculator</title>
     </head>
 
     <!-- Calculator backround colour -->
     <body id="background">
-    <!-- Heading and instructions in following div -->
+    <!-- Heading and instructions for the page in following div -->
         <div>
             <h1>The Worlds Simplest Calculator!</h1>
         <p>Three quick, easy steps away from getting your answer. <br> All you need to do is enter you two numbers and a operation :D</p>
@@ -23,7 +30,7 @@
        <!-- button with calculate function attatched -->
         <button id="button" onclick="calculate()">Calculate!</button>
         <script>
-            //calculation JS atatched to button
+            //calculation JS atatched to button and alerts user the answer
         function calculate() {
             var z = document.getElementById("secondNumber").value;
             var x = document.getElementById("firstNumber").value;
