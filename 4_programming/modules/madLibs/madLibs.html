@@ -33,35 +33,33 @@ Desc: Creates a random story depending on the input of a user
 
 <div id="story">
    <p>Your story:</p>
-    <br>
     <p id="paragraph1"></p>
-        <br>
     <p id="paragraph2"></p>
 </div>
     <script>
   function Go() {
             // Print the following in order to complete paragraph
-      //  var p1 = "Please excuse  ";
-        var nam = document.getElementById(nam).value;
-      //  var p2 = " from";
-        var cas = document.getElementById(cas).value;
-      //  var p3 = " today. His ";
-        var pr = document.getElementById(pr).value;
+        var p1 = "Please excuse  ";
+        var nam = document.getElementById("nam").value;
+        var p2 = " from";
+        var cas = document.getElementById("cas").value;
+        var p3 = " today. His ";
+        var pr = document.getElementById("pr").value;
         var p4 = " says he is too ";
-        var a = document.getElementById(a).value;
+        var a = document.getElementById("a").value;
         var p5 = " to attend the ";
-        var pl = document.getElementById(pl).value;
+        var pl = document.getElementById("pl").value;
         var p6 = ". He will return to school in "
-        var lof = document.getElementById(lof).value ;
+        var lof = document.getElementById("lof").value ;
         var p7 = ". Please send his ";
-        var t = document.getElementById(t).value;
+        var t = document.getElementById("t").value;
         var p8 = " home with ";
-        var p = document.getElementById(p).value;
+        var p = document.getElementById("p").value;
         var p9 = ", his sister.";
     //this prints all of the above to paragraph1
             var res1 = new Array(p1, nam, p2, cas, p3, pr, p4, a, p5, pl, p6, lof, p7, t, p8, p, p9);
         document.getElementById("paragraph1").innerHTML = res1;
-        res1.innerHTML.join
+
 
       // break to sign off
 
@@ -69,11 +67,11 @@ Desc: Creates a random story depending on the input of a user
         var p10 = "Signed, ";
         //re use name string "name"
         var p11 = "'s ";
-        var fm = document.getElementById(fm).value;
+        var fm = document.getElementById("fm").value;
             var res2 = new Array(p10, nam, p11, fm);
        document.getElementById("paragraph2").innerHTML = res2;
-        res2.innerHTML.join
-     /* alert("Please Excuse " + nam + " from " + cas + " today. Their " + pr + " says they is too " + a + " to attend " + pl + ". They will return to school in " + t + ". Please send their " + t + " home with " + p + ", their sister. signed, " + nam + "'s " +  fm + ".")*/
+
+     // alert("Please Excuse " + nam + " from " + cas + " today. Their " + pr + " says they is too " + a + " to attend " + pl + ". They will return to school in " + t + ". Please send their " + t + " home with " + p + ", their sister. signed, " + nam + "'s " +  fm + ".")
   }
 
         </script>
@@ -103,7 +101,7 @@ Desc: Creates a random story depending on the input of a user
                 background-color: floralwhite;
                 color: darkred;
                 width: 350px;
-                height: px;
+                height: 200px;
                 padding: 20px;
                 text-align: left;
                 position: relative;
